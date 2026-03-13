@@ -75,6 +75,9 @@
           <a class="navbar-item" href="https://realiad4ad.github.io/Real-IAD/"> 
             Real-IAD
           </a>
+          <a class="navbar-item" href="https://realiad4ad.github.io/Real-IAD_Variety/">
+            Real-IAD Variety
+          </a>
         </div>
       </div>
     </div>
@@ -117,10 +120,10 @@
             <span class="author-block"><sup>6</sup>Suzhou University &nbsp </span>
           </div>
 
-          <div class="column has-text-centered">
+          <!-- <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2504.14221"
+                <a href="http://arxiv.org/abs/2403.12580"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -129,7 +132,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://github.com/Real-IAD-D3/main"
+                <a href="https://github.com/TencentYoutuResearch/AnomalyDetection_Real-IAD"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -138,7 +141,7 @@
                   </a>
               </span>
               <span class="link-block">
-                <a href="https://huggingface.co/datasets/Real-IAD-D3/Real-IAD-D3"
+                <a href="https://huggingface.co/datasets/Real-IAD/Real-IAD/"
                    class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                         <img src="./assets/images/hf-logo.svg" alt="Hugging Face" width="20" height="20">
@@ -147,7 +150,7 @@
                 </a>
               </span>
             </div>
-          </div>
+          </div> -->
 
         </div>
       </div>
@@ -156,6 +159,12 @@
 </section>
 
 <section class="section">
+  <div class="container is-max-desktop has-text-centered">
+    <h2 class="title is-3">Coming soon ...</h2>
+  </div>
+</section>
+
+<!-- <section class="section">
   
   <div class="container is-max-desktop">
 
@@ -164,15 +173,23 @@
         <h2 class="title is-3">Dataset Download</h2>
         <div class="content has-text-justified">
           <p>
-            <!-- If you are interested in using the dataset, please send an email to <a href="", onclick="preventClick(event)">realiad4ad@outlook.com</a> from your <span style="font-weight: bold; color: red;">affiliation email address</span>. In your email, kindly provide us with the necessary information for the application. Once we receive your email, we will respond with a download link and password. Thank you for your interest and cooperation. We hope you have a pleasant experience using our dataset! A recommended application email format is provided in <a href="https://raw.githubusercontent.com/realiad4ad/Real-IAD_D3/main/format.txt">here</a>. -->
-            If you are interested in using the dataset, you can download it at <a href="https://huggingface.co/datasets/Real-IAD-D3/Real-IAD-D3"><img src="https://huggingface.co/front/assets/huggingface_logo.svg" alt="Hugging Face" style="height: 1em; vertical-align: middle;"> Hugging Face</a>. Your access request will be automatically approved. For further questions, please feel free to send emails to <a href="", onclick="preventClick(event)">realiad4ad@outlook.com</a>.
+            If you are interested in using the dataset, please send an email to <a href="", onclick="preventClick(event)">realiad4ad@outlook.com</a> from your <span style="font-weight: bold; color: red;">affiliation email address</span>. In your email, kindly provide us with the necessary information for the application. Once we receive your email, we will respond with a download link and password. Thank you for your interest and cooperation. We hope you have a pleasant experience using our dataset! A recommended application email format is provided in <a href="https://raw.githubusercontent.com/realiad4ad/Real-IAD/main/format.txt">here</a>.
           </p>
         </div>
         <h2 class="title is-3">Dataset Organization</h2>
         <div class="content has-text-justified">
           <p>
-            The Real-IAD D³ dataset comprises 20 product categories and 10 defect types. Each sample includes high-resolution RGB images, micrometer-level 3D point clouds, and pseudo-3D images generated through photometric stereo, all captured in synchronization. The dataset features defect area proportions ranging from 0.46% to 6.39% and provides pixel-level annotations.
+            Real-IAD dataset provide three main files, each serving a different purpose to cater to your needs.
           </p>
+          <ol>
+            <li><strong>realiad_1024</strong>: This is a version with a resolution of 1024 &times; 1024 (downsampled from realiad_raw), with a manageable size of around 53GB. It is tailored to meet the needs of most researchers.</li>
+            <li><strong>realiad_raw</strong>: This is the raw, high-resolution data, with a size of approximately 507GB.</li>
+            <li><strong>realiad_jsons.zip</strong>: This file consists of data splits in JSON format, providing a structured and organized way to access specific portions of the dataset as needed.</li>
+          </ol>
+          <img src="./assets/images/email_format.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/> 
+          
         </div>
       </div>
     </div>
@@ -203,44 +220,36 @@
         <th>Defect Type</th> 
       </tr>
       <tr>
-        <td>HS</td>
-        <td>scratch</td> 
-      </tr>
-      <tr>
-        <td>KD</td>
-        <td>hole</td>
-      </tr>
-      <tr>
-        <td>QK</td>
-        <td>porosity</td>
-      </tr>
-      <tr>
-        <td>KS</td>
-        <td>impact damage</td>
-      </tr>
-      <tr>
         <td>AK</td>
-        <td>pit</td>
+        <td>pit</td> 
       </tr>
       <tr>
-        <td>BMLL</td>
-        <td>exposed surface</td>
+        <td>BX</td>
+        <td>deformation</td>
+      </tr>
+      <tr>
+        <td>CH</td>
+        <td>abrasion</td>
+      </tr>
+      <tr>
+        <td>HS</td>
+        <td>scratch</td>
       </tr>
       <tr>
         <td>PS</td>
         <td>damage</td>
       </tr>
       <tr>
-        <td>JSYW</td>
-        <td>metallic contaminant</td>
+        <td>QS</td>
+        <td>missing parts</td>
       </tr>
       <tr>
         <td>YW</td>
-        <td>oil stain</td>
+        <td>foreign objects</td>
       </tr>
       <tr>
-        <td>BX</td>
-        <td>deformation</td>
+        <td>ZW</td>
+        <td>contamination</td>
       </tr>
     </table>
 
@@ -248,13 +257,14 @@
 
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Collection Pipeline of Real-IAD D³</h2>
+        <h2 class="title is-3">Collection Pipeline of Real-IAD</h2>
         <div class="content has-text-justified">
           <p>
-            The Real-IAD D³ dataset originates from a real production line, encompassing steps such as Material Preparation, Defect Manufacturing, Image Acquisition Setup, Labeling and Cleaning, Annotation are done by staffs from Rongcheer Co., Ltd.
+            The Real-IAD dataset originates from a real production line, encompassing steps such as Material Preparation, Prototype Construction, Data Collection, Annotation, and Cleaning.
+            Material Preparation, Prototype Construction, Data Collection, Annotation are done by staffs from Rongcheer Co., Ltd.
           </p>
         </div>
-        <img src="./assets/images/Collection Pipeline of Real-IAD D³.png"
+        <img src="./assets/images/pipeline.png"
             class="interpolation-image"
             alt="Interpolate start reference image."/>
       </div>
@@ -268,30 +278,21 @@
 
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Real-IAD D³ Dataset</h2>
+        <h2 class="title is-3">Real-IAD Dataset</h2>
       </div>
     </div>
 
-    <div class="column is-full-width"> 
-      <div class="content has-text-justified">
-        <p><a href="./assets/images/Real-IAD D3 Visual Imaging Report.pptx" style="width: 100px;" download><img src="./assets/images/ppt-logo.svg" alt="Logo" style="margin-bottom: -3px;" width="20" height="20">Click here</a> to obtain the hardware parameter report for data collection.</p>
-        <video controls>
-          <source src="./assets/images/video.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p style="font-family: Times New Roman; margin-top: 15px; margin-bottom:15px; font-weight: bold;">
-          Data Collection Demonstration Video
-        </p>
-      </div>
-    </div>
     <div class="columns is-centered interpolation-panel">
       <div class="column is has-text-centered">
-        <img src="./assets/images/Real-IAD D³ Dataset1.jpeg"
+        <img src="./assets/images/sample_data.png"
             class="interpolation-image"
             alt="Interpolate start reference image."/>
-        <img src="./assets/images/Real-IAD D³ Dataset2.png"
+        <img src="./assets/images/sample_data2.png"
           class="interpolation-image"
           alt="Interpolate start reference image."/>
+        <img src="./assets/images/RIAD_detail2.svg"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/>
       </div>
     </div>
 </div>
@@ -302,11 +303,12 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
-      @article{zhu2025real,
-        title={Real-IAD D3: A Real-World 2D/Pseudo-3D/3D Dataset for Industrial Anomaly Detection},
-        author={Zhu, Wenbing and Wang, Lidong and Zhou, Ziqing and Wang, Chengjie and Pan, Yurui and Zhang, Ruoyi and Chen, Zhuhao and Cheng, Linjie and Gao, Bin-Bin and Zhang, Jiangning and others},
-        journal={arXiv preprint arXiv:2504.14221},
-        year={2025}
+      @inproceedings{wang2024real,
+        title={Real-iad: A real-world multi-view dataset for benchmarking versatile industrial anomaly detection},
+        author={Wang, Chengjie and Zhu, Wenbing and Gao, Bin-Bin and Gan, Zhenye and Zhang, Jiangning and Gu, Zhihao and Qian, Shuguang and Chen, Mingang and Ma, Lizhuang},
+        booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+        pages={22883--22892},
+        year={2024}
       }
     </code></pre>
   </div>
@@ -337,7 +339,7 @@
       </div>
     </div>
   </div>
-</footer>
+</footer> -->
 
 </body>
 </html>
